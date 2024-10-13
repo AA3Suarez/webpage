@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff; /* Background color */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Allow height to adjust based on content */
+}
+
+.container {
+    width: 90%; /* Increased width for mobile */
+    max-width: 1200px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.place-name {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #2e8b57;
+    animation: slideIn 1s ease-in-out;
+}
+
+.place-location {
+    font-size: 1.2rem;
+    color: #6b8e23;
+    margin-top: 10px;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+.place-info {
+    display: flex;
+    flex-direction: column; /* Stack elements on top of each other on mobile */
+    align-items: center; /* Center align items */
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1s ease-in-out;
+}
+
+.image-container {
+    width: 100%; /* Ensure it takes full width on mobile */
+    margin-bottom: 20px; /* Add margin below image */
+}
+
+.place-image {
+    width: 100%; /* Ensure it takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Keep rounded corners */
+    animation: zoomIn 2s ease-in-out; /* Animation effect */
+}
+
+.text-content {
+    width: 100%; /* Ensure it takes full width on mobile */
+    padding: 0 10px; /* Add padding for better spacing */
+}
+
+.text-content h2 {
+    font-size: 2rem;
+    color: #2e8b57;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    margin: 15px 0;
+}
+
+.description-container {
+    max-height: none; /* Allow full height for the description on mobile */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    margin: 15px 0;
+    padding: 0 10px; /* Adds padding to prevent the text from being cut off when scrolling */
+}
+
+.description-text {
+    font-size: 1rem;
+    line-height: 1.6; /* Better readability with increased line height */
+    text-align: justify;
+}
+
+.additional-info {
+    margin-top: 30px; /* Space above the new section */
+    text-align: center; /* Center text */
+}
+
+.additional-description {
+    font-size: 1rem;
+    line-height: 1.6; /* For better readability */
+    padding: 0 10px; /* Padding for mobile spacing */
+}
+
+.additional-image-container {
+    margin-top: 20px; /* Space above the image */
+}
+
+.additional-place-image {
+    width: 100%; /* Ensure it takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Keep rounded corners */
+}
+
+.explore-btn {
+    padding: 10px 20px;
+    background-color: #2e8b57;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add margin to separate buttons */
+}
+
+.Go-Back {
+    padding: 8.5px 25px;
+    background-color: #2e8b57;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add margin to separate buttons */
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #000000;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .place-info {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+
+    .description-container {
+        max-height: 400px; /* Set a max height for description on mobile */
+        overflow-y: auto; /* Allow scrolling for overflow */
+    }
+}

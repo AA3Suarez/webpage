@@ -1,0 +1,276 @@
+/* Basic Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Video */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ensure the video takes the full height of the viewport */
+    object-fit: cover;
+    z-index: -1; /* Keep it in the background */
+    opacity: 0.7; /* Adds transparency */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5); /* Slight background color for better visibility */
+    color: white;
+}
+
+.social-media-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+.login-button {
+    background-color: #34d399;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.login-button:hover {
+    background-color: #059669;
+}
+
+/* Content Section */
+#content {
+    position: relative; 
+    z-index: 1; /* Ensure content appears above the video */
+    margin-top: 60vh; /* Space below the video */
+    padding: 20px 0; /* Optional padding for spacing */
+}
+
+/* Header Section */
+.header-section {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    font-size: 2rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeIn 4s ease-in-out;
+}
+
+/* Columns Section */
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 20px;
+    padding: 20px; /* Padding for spacing inside the grid */
+    margin-top: 20px; /* Space between the header and columns */
+}
+
+/* Column Styling */
+.column {
+    border-radius: 10px; /* Optional: keeps the rounded corners for images */
+    padding: 20px; /* Adjust the padding for spacing inside each column */
+    transition: transform 0.3s;
+    animation: slideUp 1s ease-in-out;
+    color: white; /* Ensures the text remains visible */
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background */
+}
+
+.column:hover {
+    transform: translateY(-10px); /* Keeps the hover effect for interactivity */
+}
+
+.column img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px; /* Keeps the image corners rounded */
+}
+
+.column h3 {
+    margin: 15px 0;
+}
+
+.column p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adds a shadow to the text for better visibility */
+}
+
+.read-more {
+    background-color: #12cf90;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.read-more:hover {
+    background-color: #059669;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #000000;
+    text-align: center;
+}
+
+.mid {
+    text-align: center;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px; /* For mobile view */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    width: 90%; /* Responsive width */
+    max-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #333;
+    z-index: 1;
+}
+
+/* Watch Me Button */
+#watchMeBtn {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: #34d399;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+    display: none; /* Initially hidden */
+    transition: background-color 0.3s;
+}
+
+#watchMeBtn:hover {
+    background-color: #059669;
+}
+
+/* Ensure the video fits the modal */
+#rickroll-video {
+    width: 100%;
+    height: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    #content {
+        margin-top: 60vh; /* Adjust for mobile */
+    }
+
+    .columns {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items for mobile */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .search-container {
+        width: 100%; /* Make search container full width */
+        margin-top: 10px; /* Add some space above */
+    }
+}
+
+@media (min-width: 769px) {
+    #content {
+        margin-top: 78vh; /* More space for desktop */
+    }
+
+    .columns {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+    }
+}

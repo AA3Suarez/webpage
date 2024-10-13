@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"content="width=device-width,enitial-scale=1.0">
+    <title>Explore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="images/love.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/suarez.contact?mibextid=ZbWKwL" target="_blank">
+                <img src="images/fb.png" alt="Facebook" style="width: 50px; height: 50px;">
+            </a>
+            <a href="#"><img src="images/tiktok.jpg" alt="Tiktok" style="width: 50px; height: 50px;"></a>
+            <a href="#"><img src="images/gologolo.jpg" alt="Google" style="width: 50px; height: 50px;"></a>
+            <a href="https://www.facebook.com/IM4ICCT" target="_blank"><img src="images/icct.png" alt="IM4ICCT" style="width: 50px; height: 50px;"></a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search..." />
+            <a href="login.html" class="login-button">Log In</a>
+        </div>
+        
+    </div>
+    <!-- Header Section -->
+    <div class="header-section">
+        <h1 class="always-visible">DISCOVER</h1>
+        <h2 class="always-visible">THE PLACE YOU WILL WANNA GO</h2>
+        <p class="always-visible">Introducing the Beauty of Manila and Antipolo</p>
+    </div>
+    <!-- Content Section -->
+    <div id="content">
+        <div class="container">
+            <div class="columns">
+                <div class="header-of-container">
+                    <h1 class="always-visible">EXPLORE</h1>
+                    <h2 class="always-visible">MANILA DESTINATION</h2>
+                    <p class="always-visible">Discover the 5 Best Place to go in Manila</p>
+                </div>
+                <div class="column">
+                    <img src="images/national.jpg" alt="National Museum">
+                    <h3>NATIONAL MUSEUM</h3>
+                    <p>Discover hidden wonders with unmatched experiences.</p>
+                    <a href="readmore1.html" class="read-more">Read More</a>
+                </div>
+                <div class="column">
+                    <img src="images/rizal.jpg" alt="Rizal Park">
+                    <h3>RIZAL PARK</h3>
+                    <p>Engage with diverse traditions around the world.</p>
+                    <a href="readmore2.html" class="read-more">Read More</a>
+                </div>
+                <div class="column">
+                    <img src="images/quiapo.jpg" alt="Quiapo Church">
+                    <h3>QUIAPO CHURCH</h3>
+                    <p>Transform your dreams into real adventures.</p>
+                    <a href="readmore3.html" class="read-more">Read More</a>
+                </div>
+                <div class="column">
+                    <img src="images/pasig.jpg" alt="Pasig River Esplanade">
+                    <h3>PASIG RIVER ESPLANADE</h3>
+                    <p>Relax in some of the world's most beautiful destinations.</p>
+                    <a href="readmore4.html" class="read-more">Read More</a>
+                </div>
+                <div class="column">
+                    <img src="images/intramuros.jpeg" alt="Intramuros">
+                    <h3>INTRAMUROS</h3>
+                    <p>Enjoy thrill-seeking adventures and scenic views.</p>
+                    <a href="readmore5.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Mid Section -->
+        <div class="mid">
+            <h1 class="always-visible">STILL NOT ENOUGH?</h1>
+            <h2 class="always-visible">TO CROWD?</h2>
+            <p class="always-visible">Here are some place outside of manila, if you want less people, you can check this place we recommended for you.</p>
+        </div>
+        <!-- Antipolo Destination Section -->
+        <div class="container1">
+            <div class="columns">
+                <div class="header-of-container1">
+                    <h1 class="always-visible">EXPLORE</h1>
+                    <h2 class="always-visible">ANTIPOLO DESTINATION</h2>
+                    <p class="always-visible">Explore the beauty of the "City in the Sky" – Antipolo City...</p>
+                </div>
+                <div class="column">
+                    <img src="images/cloud93.jpg" alt="Cloud9 Antipolo">
+                    <h3>CLOUD9 ANTIPOLO CITY</h3>
+                    <p>Antipolo offers stunning views of the city skyline and nature.</p>
+                    <a href="readmore1.html" class="read-more">Read More</a>
+                </div>
+                <div class="column">
+                    <img src="images/pinto.jpg" alt="Pinto Art Museum">
+                    <h3>PINTO ART MUSEUM</h3>
+                    <p>A museum showcasing modern and indigenous art collections.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="column">
+                    <img src="images/mystical.jpg" alt="Mystical Cave">
+                    <h3>MYSTICAL CAVE</h3>
+                    <p>A mysterious cave known for its religious significance and formations.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="column">
+                    <img src="images/cathedral.jpeg" alt="Antipolo Cathedral">
+                    <h3>ANTIPOLO CATHEDRAL</h3>
+                    <p>A famous pilgrimage site in Antipolo City.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2024 DUN SA FAR FAR AWAY | All Rights Reserved</p>
+    </footer>
+    <script src="search.js"></script>
+    <script src="window.js"></script>
+
+<!-- Watch Me Button -->
+<button id="watchMeBtn">Watch Me!</button>
+
+<!-- Modal -->
+<div class="modal" id="videoModal">
+    <div class="modal-content">
+        <button class="close" id="closeBtn">&times;</button>
+        <video id="rickroll-video" controls>
+            <source src="images/rick.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+    <script src="rick.js"></script> <!-- Link to your external JavaScript file -->
+</body>
+</html>
